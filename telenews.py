@@ -26,12 +26,3 @@ def get_news():
     url = 'https://www.indiatoday.in/'
     soup = scrape(url)
     return top_stories(soup)
-
-def handle_tables(table_data: list):
-    """Creates a table for all the list data is passed to it
-        :table_data: Data in a list format.
-    """
-    table = GFMT(table_data)
-    table.inner_row_border = True
-    table = table = "<pre>{}</pre>".format(table.table)
-    return table
