@@ -97,7 +97,7 @@ def cubicom(bot, update):
 
 def main():
     # Create the Updater and pass it your bot's token.
-    updater = Updater("595350816:AAGI_0cnuHgnBFqEZ7owyjHXSA_PyO_Cbsc")
+    updater = Updater("Add your token here")
     updater.dispatcher.add_handler(CallbackQueryHandler(button))
     updater.dispatcher.add_handler(CommandHandler('start', start))
     updater.dispatcher.add_handler(CommandHandler('hello', hello))
