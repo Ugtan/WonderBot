@@ -15,7 +15,7 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 logger = logging.getLogger(__name__)
 
 
-start_message = """ Hi! My name is Wonder Bot. I will help you find some basic stuff.Send /done to stop talking to me.Use these commands to control me:
+start_message = """ Hi! My name is Wonder Bot. I will help you find some basic stuff. Send /done to stop talking to me.
 These are some of the stuff i am able to perform at the moment.
 /hello - greetings from me! :)
 /github <username> - To know about your github Repos and Starred repos
@@ -33,7 +33,6 @@ def hello(bot, update):
 
 
 def facts_to_str(user_data):
-
     facts = list()
     for key,data in enumerate(user_data, 1):
         facts.append('{} - {}'.format(key, data))
@@ -106,6 +105,7 @@ def main():
     updater.dispatcher.add_handler(CommandHandler('weather', weather))
     updater.dispatcher.add_handler(CommandHandler('cubicom', cubicom))
     updater.dispatcher.add_handler(CommandHandler('help', help))
+    updater.dispatcher.add_handler(CommandHandler('done', done))
     # Start the Bot
     updater.start_polling()
 
